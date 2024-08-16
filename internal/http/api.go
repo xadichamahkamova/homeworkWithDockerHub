@@ -11,7 +11,7 @@ func NewGin(service *service.Service) *gin.Engine {
 
 	r := gin.Default()
 
-	handler := handler.NewHandler(*service)
+	handler := handler.NewHandler(service)
 
 	r.POST("/tasks", handler.CreateTask)
 	r.GET("/tasks/:id", handler.GetTask)

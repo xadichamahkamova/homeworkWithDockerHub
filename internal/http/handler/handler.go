@@ -11,9 +11,9 @@ type HandlerST struct {
 	Service service.Service
 }
 
-func NewHandler(service service.Service) *HandlerST {
+func NewHandler(service *service.Service) *HandlerST {
 	return &HandlerST{
-		Service: service,
+		Service: *service,
 	}
 }
 
